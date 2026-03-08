@@ -5,7 +5,7 @@ export function ButtonsSection() {
     <section className="mb-48">
       <div className="mb-16">
         <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">07 / Components</p>
-        <h2 className="text-5xl font-light text-[#F5F1E8] mb-8 leading-tight">Buttons</h2>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Buttons</h2>
         <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
           Primary actions in turquoise, secondary in neutral, ghost for tertiary actions.
         </p>
@@ -83,12 +83,41 @@ export function ButtonsSection() {
   );
 }
 
+export function ImageAspectRatioSection() {
+  const ratios = [
+    { label: '1:1', usage: 'Thumbnails and project previews', className: 'aspect-square' },
+    { label: '4:3', usage: 'Content images', className: 'aspect-[4/3]' },
+    { label: '16:9', usage: 'Banners or video', className: 'aspect-video' },
+  ];
+
+  return (
+    <section className="mb-48">
+      <div className="mb-16">
+        <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">08 / Foundations</p>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Image Aspect Ratio</h2>
+        <p className="text-lg text-[#B8B1A6] max-w-3xl leading-relaxed">
+          Standardized image ratios keep the layout balanced across content types.
+        </p>
+      </div>
+      <div className="grid grid-cols-12 gap-8">
+        {ratios.map((ratio) => (
+          <div key={ratio.label} className="col-span-4">
+            <div className={`w-full bg-[#404040] border border-[#F5F1E8]/12 rounded ${ratio.className}`} />
+            <p className="text-sm text-[#F5F1E8] mt-4 mb-1">{ratio.label}</p>
+            <p className="text-xs text-[#B8B1A6]">{ratio.usage}</p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 export function InputsSection() {
   return (
     <section className="mb-48">
       <div className="mb-16">
         <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">08 / Components</p>
-        <h2 className="text-5xl font-light text-[#F5F1E8] mb-8 leading-tight">Text Inputs</h2>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Text Inputs</h2>
         <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
           Clean, minimal input fields with clear focus states.
         </p>
@@ -142,91 +171,64 @@ export function InputsSection() {
   );
 }
 
-export function CheckboxesSection() {
-  const [checkbox1, setCheckbox1] = useState(false);
-  const [checkbox2, setCheckbox2] = useState(true);
-  const [radio, setRadio] = useState('option1');
+export function CheckboxSection() {
+  const [checked, setChecked] = useState(true);
 
   return (
     <section className="mb-48">
       <div className="mb-16">
         <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">09 / Components</p>
-        <h2 className="text-5xl font-light text-[#F5F1E8] mb-8 leading-tight">Selection Controls</h2>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Checkbox</h2>
         <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
-          Simple selection controls with clear checked states.
+          Single checkbox style using turquoise for checked state.
         </p>
       </div>
 
-      <div className="grid grid-cols-12 gap-16">
-        {/* Checkboxes */}
+      <div className="grid grid-cols-12 gap-8">
         <div className="col-span-6">
-          <h4 className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-8">Checkboxes</h4>
-          <div className="space-y-6">
-            <label className="flex items-center gap-4 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={checkbox1}
-                onChange={(e) => setCheckbox1(e.target.checked)}
-                className="w-6 h-6 rounded border border-[#D4D4D4] text-[#1C8C8B] focus:ring-[#1C8C8B] focus:ring-2 focus:ring-offset-0 cursor-pointer"
-              />
-              <span className="text-[#F5F1E8]">Checkbox option</span>
-            </label>
-            <label className="flex items-center gap-4 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={checkbox2}
-                onChange={(e) => setCheckbox2(e.target.checked)}
-                className="w-6 h-6 rounded border border-[#D4D4D4] text-[#1C8C8B] focus:ring-[#1C8C8B] focus:ring-2 focus:ring-offset-0 cursor-pointer"
-              />
-              <span className="text-[#F5F1E8]">Checked option</span>
-            </label>
-            <label className="flex items-center gap-4 cursor-not-allowed opacity-40">
-              <input
-                type="checkbox"
-                disabled
-                className="w-6 h-6 rounded border border-[#D4D4D4] cursor-not-allowed"
-              />
-              <span className="text-[#F5F1E8]">Disabled option</span>
-            </label>
-          </div>
+          <label className="flex items-center gap-4 cursor-pointer">
+            <input
+              type="checkbox"
+              checked={checked}
+              onChange={(e) => setChecked(e.target.checked)}
+              className="w-6 h-6 rounded border border-[#D4D4D4] bg-[#242424] accent-[#1C8C8B] cursor-pointer"
+            />
+            <span className="text-[#F5F1E8]">Enable portfolio updates</span>
+          </label>
         </div>
+      </div>
+    </section>
+  );
+}
 
-        {/* Radio Buttons */}
-        <div className="col-span-6">
-          <h4 className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-8">Radio Buttons</h4>
-          <div className="space-y-6">
-            <label className="flex items-center gap-4 cursor-pointer">
+export function RadioButtonSection() {
+  const [selected, setSelected] = useState('option1');
+  const options = ['Option 1', 'Option 2', 'Option 3'];
+
+  return (
+    <section className="mb-48">
+      <div className="mb-16">
+        <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">10 / Components</p>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Radio Button</h2>
+        <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
+          Radio button group with turquoise selected state.
+        </p>
+      </div>
+      <div className="grid grid-cols-12 gap-8">
+        <div className="col-span-6 space-y-5">
+          {options.map((option, idx) => (
+            <label key={option} className="flex items-center gap-4 cursor-pointer">
               <input
                 type="radio"
-                name="radio-group"
-                value="option1"
-                checked={radio === 'option1'}
-                onChange={(e) => setRadio(e.target.value)}
-                className="w-6 h-6 border border-[#D4D4D4] text-[#1C8C8B] focus:ring-[#1C8C8B] focus:ring-2 focus:ring-offset-0 cursor-pointer"
+                name="restored-radio-group"
+                value={`option${idx + 1}`}
+                checked={selected === `option${idx + 1}`}
+                onChange={(e) => setSelected(e.target.value)}
+                className="w-6 h-6 border border-[#D4D4D4] bg-[#242424] accent-[#1C8C8B] cursor-pointer"
               />
-              <span className="text-[#F5F1E8]">Radio option 1</span>
+              <span className="text-[#F5F1E8]">{option}</span>
             </label>
-            <label className="flex items-center gap-4 cursor-pointer">
-              <input
-                type="radio"
-                name="radio-group"
-                value="option2"
-                checked={radio === 'option2'}
-                onChange={(e) => setRadio(e.target.value)}
-                className="w-6 h-6 border border-[#D4D4D4] text-[#1C8C8B] focus:ring-[#1C8C8B] focus:ring-2 focus:ring-offset-0 cursor-pointer"
-              />
-              <span className="text-[#F5F1E8]">Radio option 2</span>
-            </label>
-            <label className="flex items-center gap-4 cursor-not-allowed opacity-40">
-              <input
-                type="radio"
-                name="radio-group"
-                disabled
-                className="w-6 h-6 border border-[#D4D4D4] cursor-not-allowed"
-              />
-              <span className="text-[#F5F1E8]">Disabled option</span>
-            </label>
-          </div>
+          ))}
         </div>
       </div>
     </section>
@@ -243,7 +245,7 @@ export function DropdownSection() {
     <section className="mb-48">
       <div className="mb-16">
         <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">10 / Components</p>
-        <h2 className="text-5xl font-light text-[#F5F1E8] mb-8 leading-tight">Dropdown Menu</h2>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Dropdown Menu</h2>
         <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
           Simple dropdown with clear hierarchy and hover states.
         </p>
@@ -297,11 +299,19 @@ export function DropdownSection() {
 }
 
 export function CardSection() {
+  const level0 = 'inset 0 1px 0 rgba(255, 255, 255, 0.02)';
+  const level1 =
+    '0 1px 2px rgba(0, 0, 0, 0.42), 0 8px 16px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.04)';
+  const level2 =
+    '0 2px 4px rgba(0, 0, 0, 0.46), 0 14px 28px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.05)';
+  const level3 =
+    '0 4px 10px rgba(0, 0, 0, 0.52), 0 22px 42px rgba(0, 0, 0, 0.34), inset 0 1px 0 rgba(255, 255, 255, 0.06)';
+
   return (
     <section className="mb-48">
       <div className="mb-16">
         <p className="text-xs uppercase tracking-widest text-[#F5F1E8]/40 mb-6">11 / Components</p>
-        <h2 className="text-5xl font-light text-[#F5F1E8] mb-8 leading-tight">Card Component</h2>
+        <h2 className="text-5xl font-light text-[#D4AC4C] mb-8 leading-tight">Card Component</h2>
         <p className="text-lg text-[#B8B1A6] max-w-2xl leading-relaxed">
           Flexible container for grouping related content with subtle elevation.
         </p>
@@ -310,10 +320,10 @@ export function CardSection() {
       <div className="grid grid-cols-12 gap-8">
         {/* Basic Card */}
         <div className="col-span-4">
-          <div className="p-8 bg-[#242424] border border-[#F5F1E8]/10 rounded">
+          <div className="p-8 bg-[#404040] border border-[#F5F1E8]/10 rounded" style={{ boxShadow: level0 }}>
             <h4 className="text-xl font-light text-[#F5F1E8] mb-4 leading-tight">Basic Card</h4>
             <p className="text-[#B8B1A6] leading-relaxed mb-6">
-              Simple card with border and minimal styling for content organization.
+              Base card using level 0 elevation for flat, stable surfaces.
             </p>
             <button className="text-[#1C8C8B] hover:text-[#2BA6A5] transition-colors text-sm">
               Learn more {'->'}
@@ -324,12 +334,12 @@ export function CardSection() {
         {/* Elevated Card */}
         <div className="col-span-4">
           <div
-            className="p-8 bg-[#242424] border border-[#F5F1E8]/10 rounded"
-            style={{ boxShadow: '0 12px 24px rgba(245, 241, 232, 0.08)' }}
+            className="p-8 bg-[#404040] border border-[#F5F1E8]/10 rounded"
+            style={{ boxShadow: level1 }}
           >
             <h4 className="text-xl font-light text-[#F5F1E8] mb-4 leading-tight">Elevated Card</h4>
             <p className="text-[#B8B1A6] leading-relaxed mb-6">
-              Card with shadow for additional emphasis and visual hierarchy.
+              Uses level 1 layered shadow for default floating content.
             </p>
             <button className="text-[#1C8C8B] hover:text-[#2BA6A5] transition-colors text-sm">
               Learn more {'->'}
@@ -340,12 +350,18 @@ export function CardSection() {
         {/* Interactive Card */}
         <div className="col-span-4">
           <div
-            className="p-8 bg-[#242424] border border-[#F5F1E8]/10 rounded hover:border-[#1C8C8B] transition-all cursor-pointer"
-            style={{ boxShadow: '0 8px 18px rgba(245, 241, 232, 0.05)' }}
+            className="p-8 bg-[#404040] border border-[#F5F1E8]/10 rounded hover:border-[#1C8C8B] transition-all duration-200 cursor-pointer hover:-translate-y-0.5"
+            style={{ boxShadow: level2 }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.boxShadow = level3;
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.boxShadow = level2;
+            }}
           >
             <h4 className="text-xl font-light text-[#F5F1E8] mb-4 leading-tight">Interactive Card</h4>
             <p className="text-[#B8B1A6] leading-relaxed mb-6">
-              Hover to see the interactive state with border and shadow.
+              Starts at level 2 and rises to level 3 on hover for clear interaction depth.
             </p>
             <span className="text-[#1C8C8B] text-sm">
               Click to action {'->'}
@@ -356,3 +372,4 @@ export function CardSection() {
     </section>
   );
 }
+

@@ -6,7 +6,7 @@ interface SidebarProps {
 }
 
 export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
-  const [expandedSections, setExpandedSections] = useState<string[]>(['foundations', 'components']);
+  const [expandedSections, setExpandedSections] = useState<string[]>(['foundations', 'components', 'application']);
 
   const toggleSection = (section: string) => {
     if (expandedSections.includes(section)) {
@@ -21,8 +21,8 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
       onClick={() => onSectionChange(id)}
       className={`w-full text-left px-8 py-3 text-sm transition-colors ${
         activeSection === id
-          ? 'text-white bg-white/10 border-l-2 border-white'
-          : 'text-white/70 hover:text-white'
+          ? 'text-white bg-[#1A1A1A] border-l-2 border-white'
+          : 'text-white hover:text-white'
       }`}
     >
       {label}
@@ -34,7 +34,7 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
     return (
       <button
         onClick={() => toggleSection(id)}
-        className="w-full text-left px-8 py-4 text-xs uppercase tracking-widest font-medium text-white/50 hover:text-white/80 transition-colors flex items-center justify-between"
+        className="w-full text-left px-8 py-4 text-xs uppercase tracking-widest font-medium text-white hover:text-white transition-colors flex items-center justify-between"
       >
         {label}
         <svg
@@ -52,33 +52,50 @@ export function Sidebar({ activeSection, onSectionChange }: SidebarProps) {
   return (
     <aside className="w-80 h-screen fixed left-0 top-0 bg-[#157372] border-r border-white/10 overflow-y-auto">
       <div className="px-8 py-12 border-b border-white/10">
-        <h1 className="text-sm uppercase tracking-widest text-white/60 mb-2">Design System</h1>
-        <p className="text-2xl text-white font-light">Portfolio</p>
+        <h1 className="text-sm uppercase tracking-widest text-[#1A1A1A]/80 mb-2">Design System</h1>
+        <p className="text-2xl text-[#1A1A1A] font-light">Portfolio</p>
       </div>
 
       <nav className="py-8">
-        <NavItem id="principles" label="Guiding Principles" />
+        <NavItem id="introduction" label="01 Introduction" />
+        <NavItem id="principles" label="02 Principles" />
         
         <div className="mt-8">
-          <SectionHeader id="foundations" label="Foundations" />
+          <SectionHeader id="foundations" label="03 Foundations" />
           {expandedSections.includes('foundations') && (
             <div>
               <NavItem id="color" label="Color System" />
               <NavItem id="typography" label="Typography" />
+              <NavItem id="iconography" label="Iconography" />
               <NavItem id="spacing" label="Spacing" />
               <NavItem id="grid" label="Grid System" />
+              <NavItem id="responsive-design" label="Responsive Design" />
               <NavItem id="elevation" label="Elevation" />
+              <NavItem id="image-aspect-ratio" label="Image Aspect Ratio" />
             </div>
           )}
         </div>
 
         <div className="mt-8">
-          <SectionHeader id="components" label="Components" />
+          <SectionHeader id="components" label="04 Components" />
           {expandedSections.includes('components') && (
             <div>
               <NavItem id="buttons" label="Buttons" />
+              <NavItem id="text-input" label="Text Input" />
+              <NavItem id="checkbox" label="Checkbox" />
+              <NavItem id="radio-button" label="Radio Button" />
               <NavItem id="dropdown" label="Dropdown" />
               <NavItem id="card" label="Card" />
+            </div>
+          )}
+        </div>
+
+        <div className="mt-8">
+          <SectionHeader id="application" label="05 Application" />
+          {expandedSections.includes('application') && (
+            <div>
+              <NavItem id="wireframes" label="Wireframes" />
+              <NavItem id="portfolio-mockups" label="Portfolio Mockups" />
             </div>
           )}
         </div>
