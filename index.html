@@ -1,16 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Design system documentation for Dorsa Zare's portfolio."
+    />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="stylesheet" href="./styles.css" />
+    <title>Design System</title>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#content">Skip to content</a>
 
-  <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-      <title>Design System</title>
-    </head>
+    <div class="page-shell">
+      <aside class="sidebar">
+        <div class="sidebar__intro">
+          <p class="eyebrow eyebrow--dark">Design System</p>
+          <p class="sidebar__title">Portfolio</p>
+        </div>
 
-    <body>
-      <div id="root"></div>
-      <script type="module" src="/src/main.tsx"></script>
-    </body>
-  </html>
-  
+        <nav class="sidebar__nav" aria-label="Section navigation">
+          <a href="#introduction">01 Introduction</a>
+          <a href="#principles">02 Principles</a>
+
+          <p class="sidebar__group">03 Foundations</p>
+          <a href="#color">Color System</a>
+          <a href="#typography">Typography</a>
+          <a href="#iconography">Iconography</a>
+          <a href="#spacing">Spacing</a>
+          <a href="#grid">Grid System</a>
+          <a href="#responsive-design">Responsive Design</a>
+          <a href="#elevation">Elevation</a>
+          <a href="#image-aspect-ratio">Image Aspect Ratio</a>
+
+          <p class="sidebar__group">04 Components</p>
+          <a href="#buttons">Buttons</a>
+          <a href="#text-input">Text Input</a>
+          <a href="#checkbox">Checkbox</a>
+          <a href="#radio-button">Radio Button</a>
+          <a href="#dropdown">Dropdown</a>
+          <a href="#card">Card</a>
+
+          <p class="sidebar__group">05 Application</p>
+          <a href="#wireframes">Wireframes</a>
+          <a href="#portfolio-mockups">Portfolio Mockups</a>
+        </nav>
+      </aside>
+
+      <main class="content" id="content">
+        <header class="hero">
+          <h1>
+            <span>Design System</span>
+          </h1>
+          <p class="hero__subhead">The visual foundation of my portfolio</p>
+          <div class="hero__rule"></div>
+          <p class="hero__body">
+            A minimal design system that reflects my approach to UX, game
+            design, and interactive media balancing structure, clarity, and
+            subtle cultural references.
+          </p>
+          <p class="hero__meta">Version 1.0 - CART 444 - Dorsa Zare</p>
+        </header>
+
+        <section id="introduction" class="section">
+          <p class="eyebrow">01 / Introduction</p>
+          <h2>Introduction</h2>
+          <div class="prose">
+            <p>
+              This design system reflects how I approach design across my work
+              in UX/UI, game design, and interactive media. I wanted to build a
+              visual language that feels clear, structured, and modern, but
+              also subtly connected to my background and personal experiences.
+            </p>
+            <p>
+              Growing up in Iran and later moving to Canada has shaped how I
+              see design and visual culture. Persian design traditions often
+              use rich colors, rhythm, and balance, while contemporary digital
+              interfaces emphasize simplicity and clarity.
+            </p>
+            <p>
+              Rather than using literal cultural patterns or ornamentation, I
+              chose colors that quietly reference Persian visual culture, like
+              turquoise and saffron. These colors appear often in Iranian
+              architecture, ceramics, and textiles.
+            </p>
+            <p>
+              My goal was to create a system that feels simple, calm, and
+              intentional, where layout, spacing, and typography guide the
+              experience while color adds a subtle sense of identity.
+            </p>
+          </div>
+        </section>
+
+        <section id="principles" class="section">
+          <p class="eyebrow">02 / Principles</p>
+          <h2>Guiding Principles</h2>
+          <div class="grid grid--two">
+            <article class="panel panel--lined">
+              <h3>Clarity Through Simplicity</h3>
+              <p>
+                I try to remove unnecessary visual noise and focus on what
+                actually matters in the interface. Clear hierarchy, readable
+                typography, and balanced spacing help users quickly understand
+                what they are looking at.
+              </p>
+            </article>
+            <article class="panel panel--lined">
+              <h3>Structure &amp; Balance</h3>
+              <p>
+                Structure is important in my design process. I rely on grids,
+                spacing systems, and alignment to create a sense of order and
+                visual rhythm.
+              </p>
+            </article>
+            <article class="panel panel--lined">
+              <h3>Purposeful Color</h3>
+              <p>
+                Color is used carefully and intentionally in this system.
+                Turquoise acts as the main accent in the interface, while
+                saffron appears more subtly as a secondary highlight.
+              </p>
+            </article>
+            <article class="panel panel--lined">
+              <h3>Cultural Subtlety</h3>
+              <p>
+                Instead of directly using Persian patterns or motifs, I chose
+                colors that reference cultural materials like tiles, ceramics,
+                and traditional architecture.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section id="color" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Color System</h2>
+          <p class="section-copy">
+            The palette combines neutral tones for clarity and readability with
+            accent colors inspired by Persian visual culture.
+          </p>
+
+          <h3 class="subheading">Neutrals</h3>
+          <div class="swatch-grid swatch-grid--six">
+            <div class="swatch"><div style="background:#121212"></div><strong>Charcoal</strong><span>#121212</span></div>
+            <div class="swatch"><div style="background:#404040"></div><strong>Gray 700</strong><span>#404040</span></div>
+            <div class="swatch"><div style="background:#737373"></div><strong>Gray 500</strong><span>#737373</span></div>
+            <div class="swatch"><div style="background:#d4d4d4"></div><strong>Gray 300</strong><span>#D4D4D4</span></div>
+            <div class="swatch"><div style="background:#f5f5f5"></div><strong>Gray 100</strong><span>#F5F5F5</span></div>
+            <div class="swatch"><div style="background:#ffffff"></div><strong>White</strong><span>#FFFFFF</span></div>
+          </div>
+
+          <h3 class="subheading">Primary &amp; Accent</h3>
+          <div class="swatch-grid">
+            <div class="swatch swatch--large"><div style="background:#1c8c8b"></div><strong>Turquoise 500</strong><span>#1C8C8B</span></div>
+            <div class="swatch swatch--large"><div style="background:#2ba6a5"></div><strong>Turquoise 400</strong><span>#2BA6A5</span></div>
+            <div class="swatch swatch--large"><div style="background:#157372"></div><strong>Turquoise 600</strong><span>#157372</span></div>
+            <div class="swatch swatch--large"><div style="background:#d4ac4c"></div><strong>Saffron 500</strong><span>#D4AC4C</span></div>
+            <div class="swatch swatch--large"><div style="background:#e1bc66"></div><strong>Saffron 400</strong><span>#E1BC66</span></div>
+          </div>
+        </section>
+
+        <section id="typography" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Typography</h2>
+          <div class="type-list">
+            <div class="type-row"><div><strong>Display</strong><span>72px / 80px</span></div><p class="type-sample type-sample--display">The quick brown fox</p></div>
+            <div class="type-row"><div><strong>Headline</strong><span>48px / 56px</span></div><p class="type-sample type-sample--headline">The quick brown fox jumps</p></div>
+            <div class="type-row"><div><strong>Title</strong><span>32px / 40px</span></div><p class="type-sample type-sample--title">The quick brown fox jumps over</p></div>
+            <div class="type-row"><div><strong>Body</strong><span>16px / 28px</span></div><p class="type-sample">The quick brown fox jumps over the lazy dog</p></div>
+          </div>
+        </section>
+
+        <section id="iconography" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Iconography</h2>
+          <div class="grid grid--four">
+            <div class="icon-card"><div class="icon-box">⌂</div><p>Home</p></div>
+            <div class="icon-card"><div class="icon-box">⌕</div><p>Search</p></div>
+            <div class="icon-card"><div class="icon-box">⚙</div><p>Settings</p></div>
+            <div class="icon-card"><div class="icon-box">→</div><p>Arrow Right</p></div>
+          </div>
+        </section>
+
+        <section id="spacing" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Spacing Scale</h2>
+          <div class="space-list">
+            <div class="space-row"><span>4px</span><div class="space-bar" style="width:4px"></div></div>
+            <div class="space-row"><span>8px</span><div class="space-bar" style="width:8px"></div></div>
+            <div class="space-row"><span>16px</span><div class="space-bar" style="width:16px"></div></div>
+            <div class="space-row"><span>24px</span><div class="space-bar" style="width:24px"></div></div>
+            <div class="space-row"><span>32px</span><div class="space-bar" style="width:32px"></div></div>
+            <div class="space-row"><span>48px</span><div class="space-bar" style="width:48px"></div></div>
+            <div class="space-row"><span>64px</span><div class="space-bar" style="width:64px"></div></div>
+          </div>
+        </section>
+
+        <section id="grid" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Grid System</h2>
+          <div class="grid-demo">
+            <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
+            <span>07</span><span>08</span><span>09</span><span>10</span><span>11</span><span>12</span>
+          </div>
+        </section>
+
+        <section id="responsive-design" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Responsive Design</h2>
+          <div class="table-like">
+            <div><strong>Mobile</strong><span>&lt;768px</span></div>
+            <div><strong>Tablet</strong><span>768-1024px</span></div>
+            <div><strong>Desktop</strong><span>1024-1440px</span></div>
+            <div><strong>Large Desktop</strong><span>1440px+</span></div>
+          </div>
+        </section>
+
+        <section id="elevation" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Elevation</h2>
+          <div class="grid grid--three">
+            <div class="elevation-card elevation-card--1"><span>1</span><p>Cards, containers</p></div>
+            <div class="elevation-card elevation-card--2"><span>2</span><p>Dropdowns, popovers</p></div>
+            <div class="elevation-card elevation-card--3"><span>3</span><p>Modals, dialogs</p></div>
+          </div>
+        </section>
+
+        <section id="image-aspect-ratio" class="section">
+          <p class="eyebrow">03 / Foundations</p>
+          <h2>Image Aspect Ratio</h2>
+          <div class="grid grid--three">
+            <div><div class="ratio-box ratio-box--square"></div><p>1:1</p></div>
+            <div><div class="ratio-box ratio-box--four-three"></div><p>4:3</p></div>
+            <div><div class="ratio-box ratio-box--video"></div><p>16:9</p></div>
+          </div>
+        </section>
+
+        <section id="buttons" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Buttons</h2>
+          <div class="grid grid--four">
+            <div class="demo-cell"><button class="btn btn--primary" type="button">Button</button><span>Primary</span></div>
+            <div class="demo-cell"><button class="btn btn--secondary" type="button">Button</button><span>Secondary</span></div>
+            <div class="demo-cell"><button class="btn btn--ghost" type="button">Button</button><span>Ghost</span></div>
+            <div class="demo-cell"><button class="btn btn--disabled" type="button" disabled>Button</button><span>Disabled</span></div>
+          </div>
+        </section>
+
+        <section id="text-input" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Text Input</h2>
+          <div class="grid grid--two">
+            <label class="field">
+              <span>Default</span>
+              <input type="text" placeholder="Enter text" />
+            </label>
+            <label class="field">
+              <span>Error</span>
+              <input class="field__error" type="text" placeholder="Enter text" />
+            </label>
+          </div>
+        </section>
+
+        <section id="checkbox" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Checkbox</h2>
+          <label class="choice"><input type="checkbox" checked /> <span>Enable portfolio updates</span></label>
+        </section>
+
+        <section id="radio-button" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Radio Button</h2>
+          <div class="choice-group">
+            <label class="choice"><input type="radio" name="portfolio-option" checked /> <span>Option 1</span></label>
+            <label class="choice"><input type="radio" name="portfolio-option" /> <span>Option 2</span></label>
+            <label class="choice"><input type="radio" name="portfolio-option" /> <span>Option 3</span></label>
+          </div>
+        </section>
+
+        <section id="dropdown" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Dropdown</h2>
+          <label class="field">
+            <span>Dropdown Label</span>
+            <select>
+              <option>Select an option</option>
+              <option>Option 1</option>
+              <option>Option 2</option>
+              <option>Option 3</option>
+            </select>
+          </label>
+        </section>
+
+        <section id="card" class="section">
+          <p class="eyebrow">04 / Components</p>
+          <h2>Card Component</h2>
+          <div class="grid grid--three">
+            <article class="card"><h3>Basic Card</h3><p>Base card using light elevation for flat, stable surfaces.</p><a href="#card">Learn more</a></article>
+            <article class="card card--raised"><h3>Elevated Card</h3><p>Uses layered shadow for default floating content.</p><a href="#card">Learn more</a></article>
+            <article class="card card--interactive"><h3>Interactive Card</h3><p>Raises on hover for clear interaction depth.</p><a href="#card">Click to action</a></article>
+          </div>
+        </section>
+
+        <section id="wireframes" class="section">
+          <p class="eyebrow">05 / Application</p>
+          <h2>Wireframes</h2>
+          <div class="grid grid--two">
+            <div class="placeholder-box"></div>
+            <div class="placeholder-box"></div>
+          </div>
+        </section>
+
+        <section id="portfolio-mockups" class="section">
+          <p class="eyebrow">05 / Application</p>
+          <h2>Portfolio Mockups</h2>
+          <div class="grid grid--mockups">
+            <div class="placeholder-box placeholder-box--large"></div>
+            <div class="placeholder-box placeholder-box--large"></div>
+          </div>
+        </section>
+
+        <p class="back-top"><a href="#top">Back to top</a></p>
+      </main>
+    </div>
+  </body>
+</html>
