@@ -435,6 +435,7 @@ h3 {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
+  max-width: 28rem;
 }
 
 .field input,
@@ -445,6 +446,10 @@ h3 {
   color: var(--text);
   border: 1px solid rgba(245, 241, 232, 0.18);
   border-radius: 0.25rem;
+}
+
+#text-input .grid--two {
+  align-items: start;
 }
 
 .field__error {
@@ -506,16 +511,21 @@ h3 {
   min-height: 20rem;
 }
 
-.back-top {
-  margin: 5rem 0 0;
-}
-
-.back-top a {
-  display: inline-block;
-  padding: 0.85rem 1.2rem;
+.back-to-top-button {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
   background: var(--accent);
   color: var(--bg);
   border-radius: 999px;
+  box-shadow: var(--shadow-2);
+  font-size: 1.25rem;
+  font-weight: 700;
+  z-index: 20;
 }
 
 @media (max-width: 1080px) {
@@ -557,5 +567,10 @@ h3 {
 
   .grid-demo {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .back-to-top-button {
+    right: 1rem;
+    bottom: 1rem;
   }
 }
