@@ -325,6 +325,7 @@ h3 {
 
 .grid--mockups {
   grid-template-columns: 2fr 1fr;
+  margin-top: 1.5rem;
 }
 
 .panel {
@@ -978,6 +979,10 @@ h3 {
   display: block;
   width: min(100%, 44rem);
   margin: 0 auto;
+}
+
+.mockup-lightbox-link {
+  width: 100%;
 }
 
 .wireframe-image {

@@ -449,11 +449,50 @@
         <section id="portfolio-mockups" class="section">
           <p class="eyebrow">05 / Application</p>
           <h2>Portfolio Mockups</h2>
+          <div class="section-copy wireframes-link">
+            <p>View the live portfolio website:</p>
+            <a
+              class="btn btn--secondary"
+              href="https://dorsazare.wixsite.com/portfolio"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Visit Website
+            </a>
+          </div>
           <div class="grid grid--mockups">
-            <div class="placeholder-box placeholder-box--large"></div>
-            <div class="placeholder-box placeholder-box--large"></div>
+            <a class="wireframe-lightbox-link mockup-lightbox-link" href="#website-lightbox">
+              <img
+                class="wireframe-image"
+                src="./assets/website.png"
+                alt="Homepage mockup of the portfolio website."
+              />
+            </a>
+            <a class="wireframe-lightbox-link mockup-lightbox-link" href="#website2-lightbox">
+              <img
+                class="wireframe-image"
+                src="./assets/website2.png"
+                alt="Second mockup view of the portfolio website."
+              />
+            </a>
           </div>
         </section>
+
+        <div id="website-lightbox" class="lightbox">
+          <a class="lightbox__backdrop" href="#portfolio-mockups" aria-label="Close expanded website mockup view"></a>
+          <div class="lightbox__content">
+            <a class="lightbox__close" href="#portfolio-mockups" aria-label="Close expanded website mockup view">Close</a>
+            <img class="lightbox__image" src="./assets/website.png" alt="Expanded view of the portfolio website homepage mockup." />
+          </div>
+        </div>
+
+        <div id="website2-lightbox" class="lightbox">
+          <a class="lightbox__backdrop" href="#portfolio-mockups" aria-label="Close expanded second website mockup view"></a>
+          <div class="lightbox__content">
+            <a class="lightbox__close" href="#portfolio-mockups" aria-label="Close expanded second website mockup view">Close</a>
+            <img class="lightbox__image" src="./assets/website2.png" alt="Expanded view of the second portfolio website mockup." />
+          </div>
+        </div>
 
       </main>
     </div>
