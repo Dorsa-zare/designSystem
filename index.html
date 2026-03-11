@@ -51,22 +51,38 @@
 
       <main class="content" id="content">
         <header class="hero">
-          <h1>
-            <span>Design System</span>
-          </h1>
-          <p class="hero__subhead">The visual foundation of my portfolio</p>
-          <div class="hero__rule"></div>
-          <p class="hero__body">
-            A minimal design system that reflects my approach to UX, game
-            design, and interactive media balancing structure, clarity, and
-            subtle cultural references.
-          </p>
-          <p class="hero__meta">Version 1.0 - CART 444 - Dorsa Zare</p>
+          <div class="hero__topline">
+            <p class="eyebrow">Visual Language / Personal Archive</p>
+            <p class="hero__stamp">Version 1.0</p>
+          </div>
+          <div class="hero__layout">
+            <div class="hero__headline">
+              <p class="hero__kicker">Design System</p>
+              <h1>
+                <span class="hero__main">System,</span>
+                <span class="hero__connector">but</span>
+                <span class="hero__script hero__script--alt">personal</span>
+              </h1>
+            </div>
+            <div class="hero__aside">
+              <p class="hero__subhead">The visual foundation of my portfolio</p>
+              <p class="hero__body">
+                A design system for UX, game design, and interactive media that
+                balances structure, clarity, and subtle cultural references
+                without losing warmth or personality.
+              </p>
+              <p class="hero__meta">CART 444 / Dorsa Zare</p>
+            </div>
+          </div>
+          <div class="hero__mark" aria-hidden="true"></div>
         </header>
 
         <section id="introduction" class="section">
           <p class="eyebrow">01 / Introduction</p>
           <h2>Introduction</h2>
+          <p class="annotation-note annotation-note--intro">
+            Learn about me and what I do and why I created this design system.
+          </p>
           <div class="prose">
             <p>
               This design system reflects how I approach design across my work
@@ -141,6 +157,18 @@
             The palette combines neutral tones for clarity and readability with
             accent colors inspired by Persian visual culture.
           </p>
+          <p class="annotation-note annotation-note--color">
+            this is where I let the cultural references come through softly
+          </p>
+
+          <h3 class="subheading">Primary &amp; Accent</h3>
+          <div class="swatch-grid">
+            <div class="swatch swatch--large"><div style="background:#1c8c8b"></div><strong>Turquoise 500</strong><span>#1C8C8B</span></div>
+            <div class="swatch swatch--large"><div style="background:#2ba6a5"></div><strong>Turquoise 400</strong><span>#2BA6A5</span></div>
+            <div class="swatch swatch--large"><div style="background:#157372"></div><strong>Turquoise 600</strong><span>#157372</span></div>
+            <div class="swatch swatch--large"><div style="background:#d4ac4c"></div><strong>Saffron 500</strong><span>#D4AC4C</span></div>
+            <div class="swatch swatch--large"><div style="background:#e1bc66"></div><strong>Saffron 400</strong><span>#E1BC66</span></div>
+          </div>
 
           <h3 class="subheading">Neutrals</h3>
           <div class="swatch-grid swatch-grid--six">
@@ -151,21 +179,34 @@
             <div class="swatch"><div style="background:#f5f5f5"></div><strong>Gray 100</strong><span>#F5F5F5</span></div>
             <div class="swatch"><div style="background:#ffffff"></div><strong>White</strong><span>#FFFFFF</span></div>
           </div>
-
-          <h3 class="subheading">Primary &amp; Accent</h3>
-          <div class="swatch-grid">
-            <div class="swatch swatch--large"><div style="background:#1c8c8b"></div><strong>Turquoise 500</strong><span>#1C8C8B</span></div>
-            <div class="swatch swatch--large"><div style="background:#2ba6a5"></div><strong>Turquoise 400</strong><span>#2BA6A5</span></div>
-            <div class="swatch swatch--large"><div style="background:#157372"></div><strong>Turquoise 600</strong><span>#157372</span></div>
-            <div class="swatch swatch--large"><div style="background:#d4ac4c"></div><strong>Saffron 500</strong><span>#D4AC4C</span></div>
-            <div class="swatch swatch--large"><div style="background:#e1bc66"></div><strong>Saffron 400</strong><span>#E1BC66</span></div>
-          </div>
         </section>
 
         <section id="typography" class="section">
           <p class="eyebrow">03 / Foundations</p>
           <h2>Typography</h2>
+          <p class="section-copy">
+            The typography combines a clean modern sans serif with a more
+            handwritten expressive style. I wanted the type system to feel
+            minimal and readable, but still leave room for personality and
+            imperfection in the way key moments are presented.
+          </p>
+          <p class="annotation-note annotation-note--type">
+            fonts that combine the modern minimal side of my style with a more personal imperfect side
+          </p>
           <div class="type-list">
+            <div class="type-row type-row--fonts">
+              <div>
+                <strong>Fonts Used</strong>
+                <span>Headings: Space Grotesk</span>
+                <span>Handwritten Accent: Caveat</span>
+                <span>Body: Segoe UI</span>
+              </div>
+              <div class="font-preview-list">
+                <p class="type-sample font-preview font-preview--grotesk">Space Grotesk in action</p>
+                <p class="type-sample font-preview font-preview--caveat">Caveat in action</p>
+                <p class="type-sample font-preview font-preview--body">Segoe UI in action</p>
+              </div>
+            </div>
             <div class="type-row"><div><strong>Display</strong><span>72px / 80px</span></div><p class="type-sample type-sample--display">The quick brown fox</p></div>
             <div class="type-row"><div><strong>Headline</strong><span>48px / 56px</span></div><p class="type-sample type-sample--headline">The quick brown fox jumps</p></div>
             <div class="type-row"><div><strong>Title</strong><span>32px / 40px</span></div><p class="type-sample type-sample--title">The quick brown fox jumps over</p></div>
@@ -177,24 +218,78 @@
           <p class="eyebrow">03 / Foundations</p>
           <h2>Iconography</h2>
           <div class="grid grid--four">
-            <div class="icon-card"><div class="icon-box">⌂</div><p>Home</p></div>
-            <div class="icon-card"><div class="icon-box">⌕</div><p>Search</p></div>
-            <div class="icon-card"><div class="icon-box">⚙</div><p>Settings</p></div>
-            <div class="icon-card"><div class="icon-box">→</div><p>Arrow Right</p></div>
+            <div class="icon-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="img">
+                  <path d="M12 30 L32 13 L52 30" />
+                  <path d="M18 28 V50 H46 V28" />
+                  <path d="M28 50 V38 H36 V50" />
+                </svg>
+              </div>
+              <p>Home</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="img">
+                  <circle cx="28" cy="28" r="14" />
+                  <path d="M38 39 L51 52" />
+                </svg>
+              </div>
+              <p>Search</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="img">
+                  <circle cx="32" cy="32" r="10" />
+                  <path d="M32 12 V18" />
+                  <path d="M32 46 V52" />
+                  <path d="M12 32 H18" />
+                  <path d="M46 32 H52" />
+                  <path d="M18 18 L22 22" />
+                  <path d="M42 42 L46 46" />
+                  <path d="M18 46 L22 42" />
+                  <path d="M42 22 L46 18" />
+                </svg>
+              </div>
+              <p>Settings</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="img">
+                  <path d="M12 32 H50" />
+                  <path d="M39 21 L51 32 L39 43" />
+                </svg>
+              </div>
+              <p>Arrow</p>
+            </div>
+            <div class="icon-card">
+              <div class="icon-box" aria-hidden="true">
+                <svg viewBox="0 0 64 64" role="img">
+                  <path d="M32 52 V14" />
+                  <path d="M21 25 L32 13 L43 25" />
+                </svg>
+              </div>
+              <p>Arrow Up</p>
+            </div>
           </div>
         </section>
 
         <section id="spacing" class="section">
           <p class="eyebrow">03 / Foundations</p>
           <h2>Spacing Scale</h2>
-          <div class="space-list">
-            <div class="space-row"><span>4px</span><div class="space-bar" style="width:4px"></div></div>
-            <div class="space-row"><span>8px</span><div class="space-bar" style="width:8px"></div></div>
-            <div class="space-row"><span>16px</span><div class="space-bar" style="width:16px"></div></div>
-            <div class="space-row"><span>24px</span><div class="space-bar" style="width:24px"></div></div>
-            <div class="space-row"><span>32px</span><div class="space-bar" style="width:32px"></div></div>
-            <div class="space-row"><span>48px</span><div class="space-bar" style="width:48px"></div></div>
-            <div class="space-row"><span>64px</span><div class="space-bar" style="width:64px"></div></div>
+          <div class="space-layout">
+            <div class="space-list">
+              <div class="space-row"><span>4px</span><div class="space-bar" style="width:4px"></div></div>
+              <div class="space-row"><span>8px</span><div class="space-bar" style="width:8px"></div></div>
+              <div class="space-row"><span>16px</span><div class="space-bar" style="width:16px"></div></div>
+              <div class="space-row"><span>24px</span><div class="space-bar" style="width:24px"></div></div>
+              <div class="space-row"><span>32px</span><div class="space-bar" style="width:32px"></div></div>
+              <div class="space-row"><span>48px</span><div class="space-bar" style="width:48px"></div></div>
+              <div class="space-row"><span>64px</span><div class="space-bar" style="width:64px"></div></div>
+            </div>
+            <p class="annotation-note annotation-note--spacing">
+              spacing does a lot of the quiet work here
+            </p>
           </div>
         </section>
 
@@ -223,8 +318,8 @@
           <h2>Elevation</h2>
           <div class="grid grid--three">
             <div class="elevation-card elevation-card--1"><span>1</span><p>Cards, containers</p></div>
-            <div class="elevation-card elevation-card--2"><span>2</span><p>Dropdowns, popovers</p></div>
-            <div class="elevation-card elevation-card--3"><span>3</span><p>Modals, dialogs</p></div>
+            <div class="elevation-card elevation-card--2"><span>2</span><p>Popovers, dropdowns</p></div>
+            <div class="elevation-card elevation-card--3"><span>3</span><p>Important information</p></div>
           </div>
         </section>
 
@@ -232,9 +327,18 @@
           <p class="eyebrow">03 / Foundations</p>
           <h2>Image Aspect Ratio</h2>
           <div class="grid grid--three">
-            <div><div class="ratio-box ratio-box--square"></div><p>1:1</p></div>
-            <div><div class="ratio-box ratio-box--four-three"></div><p>4:3</p></div>
-            <div><div class="ratio-box ratio-box--video"></div><p>16:9</p></div>
+            <div>
+              <div class="ratio-box ratio-box--square"><span>Thumbnail, profile image</span></div>
+              <p>1:1</p>
+            </div>
+            <div>
+              <div class="ratio-box ratio-box--four-three"><span>Project image, gallery</span></div>
+              <p>4:3</p>
+            </div>
+            <div>
+              <div class="ratio-box ratio-box--video"><span>Cinematic image, video</span></div>
+              <p>16:9</p>
+            </div>
           </div>
         </section>
 
@@ -247,6 +351,9 @@
             <div class="demo-cell"><button class="btn btn--ghost" type="button">Button</button><span>Ghost</span></div>
             <div class="demo-cell"><button class="btn btn--disabled" type="button" disabled>Button</button><span>Disabled</span></div>
           </div>
+          <p class="annotation-note annotation-note--buttons">
+            these should invite interaction gently
+          </p>
         </section>
 
         <section id="text-input" class="section">
@@ -278,6 +385,9 @@
             <label class="choice"><input type="radio" name="portfolio-option" /> <span>Option 2</span></label>
             <label class="choice"><input type="radio" name="portfolio-option" /> <span>Option 3</span></label>
           </div>
+          <p class="annotation-note annotation-note--choice">
+            I kept these minimal because they should support the task, not steal attention.
+          </p>
         </section>
 
         <section id="dropdown" class="section">
@@ -307,11 +417,34 @@
         <section id="wireframes" class="section">
           <p class="eyebrow">05 / Application</p>
           <h2>Wireframes</h2>
-          <div class="grid grid--two">
-            <div class="placeholder-box"></div>
-            <div class="placeholder-box"></div>
+          <div class="section-copy wireframes-link">
+            <p>View the original Figma wireframe:</p>
+            <a
+              class="btn btn--secondary"
+              href="https://www.figma.com/design/DGeFl6BXvzSikOhbjg50zf/portfolio-wireframe?node-id=0-1&t=hCbKIWXZua3SMWKp-1"
+              target="_blank"
+              rel="noreferrer"
+            >
+              View Figma
+            </a>
           </div>
+          <a class="wireframe-lightbox-link" href="#wireframe-lightbox">
+            <img class="wireframe-image" src="./assets/wireframe.png" alt="Wireframes of the portfolio layout created in Figma." />
+          </a>
+          <p class="annotation-note annotation-note--wireframes">
+            I wireframed these in Figma to create a low-fidelity prototype of
+            my portfolio layout. I also started adding the colors and visual
+            style I wanted to use.
+          </p>
         </section>
+
+        <div id="wireframe-lightbox" class="lightbox">
+          <a class="lightbox__backdrop" href="#wireframes" aria-label="Close expanded wireframe view"></a>
+          <div class="lightbox__content">
+            <a class="lightbox__close" href="#wireframes" aria-label="Close expanded wireframe view">Close</a>
+            <img class="lightbox__image" src="./assets/wireframe.png" alt="Expanded view of the portfolio wireframes created in Figma." />
+          </div>
+        </div>
 
         <section id="portfolio-mockups" class="section">
           <p class="eyebrow">05 / Application</p>
